@@ -25,7 +25,7 @@ class ImagesController < ApplicationController
     @image = Image.new(image_params)
     base64_image = ImageToBase64.new(image_params.fetch("attachment"))
     @image.data_uri = base64_image.image_to_base64
-    ##with services code
+    ##without services
     # path = image_params.fetch("attachment").tempfile.path
     # content_type = image_params.fetch("attachment").content_type
     # @image.data_uri = File.open(path, 'rb') do |img|
